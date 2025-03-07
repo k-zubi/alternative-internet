@@ -1,0 +1,6 @@
+flask
+openai
+cerebras_cloud_sdk
+python-dotenv
+fal-client
+requests
