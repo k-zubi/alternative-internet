@@ -8,11 +8,9 @@ AlternativeInternet generates immersive fictional web experiences based on diffe
 
 ## Features
 
-- **Multiple Fictional Scenarios**: Includes Retrofuturist, Etherweave, Cyberpunk, and Solarpunk scenarios
-- **Dynamic Content Generation**: Creates realistic content using language models
-- **Interactive Chat Interface**: Engage with the fictional internet through a chat-based interface
-- **Image Generation**: Custom imagery that matches each alternative scenario
-- **Extensible Framework**: Easy to add new fictional scenarios
+- **Sample and Custom Fictional Scenarios**: Includes Retrofuturist, Etherweave, Cyberpunk, and Solarpunk scenarios as samples and allows users to create custom scenarios.
+- **Dynamic Content Generation**: Creates realistic HTML webpages using language models, including by leveraging the Cerebras API for ultra-fast generation.
+- **Image Generation**: Custom imagery that matches each alternative scenario, generated using the Flux Schnell model on the FAL API for ultra-fast image generation.
 
 ## Installation
 
@@ -24,8 +22,8 @@ AlternativeInternet generates immersive fictional web experiences based on diffe
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/username/AlternativeInternet.git
-cd AlternativeInternet
+git clone https://github.com/k-zubi/alternative-internet.git
+cd alternative-internet
 ```
 
 2. Install dependencies:
@@ -36,7 +34,7 @@ pip install -r requirements.txt
 3. Set up environment variables:
 Create a `.env` file in the project root with your API keys:
 ```
-OPENAI_API_KEY=your_openai_api_key
+OPENAI_API_KEY=your_openai_api_key      # If using OpenAI
 CEREBRAS_API_KEY=your_cerebras_api_key  # If using Cerebras
 FAL_KEY=your_fal_api_key                # For image generation
 ```
@@ -95,16 +93,8 @@ AlternativeInternet/
 │   ├── cyberpunk.json
 │   ├── solarpunk.json
 │   └── scenario_manager.py
-└── image_cache/          # Cached images for each scenario
+└── image_cache/          # Cached images
 ```
-
-## Extending the Project
-
-### Adding a New Scenario
-
-1. Create a new JSON configuration file in the `prompts/` directory
-2. Add scenario-specific imagery to the `image_cache/` directory
-3. Update the scenario manager to include your new scenario
 
 ## License
 
